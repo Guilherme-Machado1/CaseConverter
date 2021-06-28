@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Converter</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+<body id="body" class="ml-2">
+    <h1 class="h1">Converta alguns textos!!</h1>
+    <div>
+        <form class="form-group" id="form">
+            <div>
+                <textarea class="form-control"  placeholder="Insert Your text" id="text"></textarea>
+            </div>
+            
+        </form>
+        <div class="container">
+            <div class="d-flex justify-content-center">
+                    <button class="btn btn-primary ml-2" onclick="LowerCase()">Para Minúsculas</button>
+                    <button class="btn btn-primary ml-2" onclick="UpperCase()">Para Maiúsculas</button>
+                    <button class="btn btn-primary ml-2" onclick="alternated()">Alternado</button>      
+                    <button class="btn btn-primary ml-2" onclick="Invert()">Inverter</button>  
+                    <button class="btn btn-primary ml-2" onclick="DarkMode()">Modo Noturno</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
