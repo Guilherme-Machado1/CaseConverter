@@ -1,40 +1,45 @@
 const getText = document.querySelector('#text');
-// const form = document.querySelector('#form');
+let getValue = '';
+let textLowerCase = '';
+let textUpperCase = ''
+let store = '';
+let split = '';
+
 function LowerCase(){
-    let getValue = getText.value
-    let textLowerCase = getValue.toLowerCase();
+    getValue = getText.value
+    textLowerCase = getValue.toLowerCase();
     getText.value = textLowerCase
 }
 
 function UpperCase(){
-    let getValue = getText.value
-    let textUpperCase = getValue.toUpperCase();
+    getValue = getText.value
+    textUpperCase = getValue.toUpperCase();
     getText.value = textUpperCase
 }
 
 function alternated(){
-    let getValue = getText.value;
-    let guarda = '';
+    getValue = getText.value;
+    store = '';
     for (let i = 0; i < getValue.length; i++) {
         
         if(i % 2 !== 0){
             if(getValue[i] === getValue[i].toUpperCase()){
-                guarda += getValue[i].toLowerCase();
+                store += getValue[i].toLowerCase();
                 continue;
             }
             if(getValue[i] === getValue[i].toLowerCase()){
-                guarda += getValue[i].toUpperCase();
+                store += getValue[i].toUpperCase();
                 continue;
             }
         }
-        guarda += getValue[i];
+        store += getValue[i];
     }
-    getText.value = guarda;
+    getText.value = store;
 }
 
 function Invert(){
-    let getValue = getText.value;
-    let split = Array.from(getValue);
+    getValue = getText.value;
+    split = Array.from(getValue);
     split = split.reverse();
     split = split.join("", ",");
     getText.value = split;
